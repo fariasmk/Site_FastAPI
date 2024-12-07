@@ -1,0 +1,18 @@
+Iniciar aplicação:
+ python main.py
+
+python -m venv env
+env\Scripts\activate
+pip install -r requirements.txt
+
+
+Comandos dados inicialmente no curso
+pip install --upgrade pip setuptools whell
+pip install fastapi Jinja2 uvicorn python-multipart sqlalchemy aiofile psycopg2-binary asyncpg\
+pip freeze > requirements.txt
+Dentro da passta publico no terminal: python -m http.server
+
+
+
+Selecionar todo o conteúdo:
+Ctrl + A
