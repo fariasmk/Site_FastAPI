@@ -61,7 +61,8 @@ class BaseCrudView:
         await object_controller.del_crud(id_obj=objeto.id)
 
 
-        return Response(object_controller.request.url_for(f"{self.template_base}_list"))
+        return Response()
+        # return Response(object_controller.request.url_for(f"{self.template_base}_list"))
 
 
     async def object_details(self, object_controller: BaseController, obj_id: int) -> Response:

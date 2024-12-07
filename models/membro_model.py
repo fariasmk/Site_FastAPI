@@ -18,7 +18,7 @@ class MembroModel(settings.DBBaseModel):
             raise ValueError("O campo 'função' é obrigatório e não pode ser vazio.")
 
         # Verifica se a função menciona 'Python'
-        if 'Python' not in value:
-            raise ValueError("A função deve mencionar 'Python'.")
+        # if 'Python' not in value:
+        #     raise ValueError("A função deve mencionar 'Python'.")
 
         return value
