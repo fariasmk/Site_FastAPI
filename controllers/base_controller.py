@@ -44,21 +44,17 @@ class BaseController:
     async def put_crud(self, obj: object) -> None:
         raise NotImplementedError("Você precisa implementar este método.")
     
+    
     async def del_crud(self, id_obj: int) -> None:
         async with get_session() as session:
-            try:
-                obj: self.model = await session.get(self.model, id_obj)
-                if not obj:
-                    raise ValueError(f"Objeto com ID {id_obj} não encontrado.")
-                
+            obj: self.model = await session.get(self.model, id_obj)
+
+            if obj:
                 await session.delete(obj)
                 await session.commit()
-            except Exception as e:
-                await session.rollback()
-                raise e
-    
-    # Métodos genéricos
 
+
+    # Métodos genéricos
     async def get_objetos(self, model_obj: object) -> Optional[List[object]]:
         """
         Retorna todos os registros de object
